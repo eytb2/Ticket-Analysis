@@ -1,0 +1,37 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <cn.lemon.ticketsystem.ui.TitleBar
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:background_color="@color/black"
+        app:text_content="资讯"
+        app:title_textColor="@color/white"
+        app:title_textSize="20sp"
+        >
+    </cn.lemon.ticketsystem.ui.TitleBar>
+
+    <cn.lemon.ticketsystem.ui.PullToRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/refresh_head"/>
+
+        <cn.lemon.ticketsystem.ui.pullableview.PullableListView
+            android:id="@+id/newsList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:dividerHeight="0.5dp"
+            android:divider="@color/gray"/>
+
+        <include layout="@layout/load_more"/>
+
+    </cn.lemon.ticketsystem.ui.PullToRefreshLayout>
+
+</LinearLayout>
