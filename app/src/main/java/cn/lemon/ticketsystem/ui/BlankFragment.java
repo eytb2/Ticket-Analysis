@@ -20,7 +20,6 @@ import cn.lemon.ticketsystem.bean.type.TicketTypeEnum;
  */
 public class BlankFragment extends BaseFuncFragment {
 
-
     @Override
     public int getLayoutId() {
         return R.layout.fragment_blank;
@@ -66,4 +65,10 @@ public class BlankFragment extends BaseFuncFragment {
         BlankFragment fragment = new BlankFragment();
         return fragment;
     }
+
+
+
+
+
+
 }

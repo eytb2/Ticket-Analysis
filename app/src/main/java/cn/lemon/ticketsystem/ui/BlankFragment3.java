@@ -31,10 +31,10 @@ public class BlankFragment3 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        inflate = inflater.inflate(R.layout.fragment_blank_fragment2, container, false);
+        inflate = inflater.inflate(R.layout.fragment_blank_fragment3, container, false);
         // Inflate the layout for this fragment
         mTitleBarUtil= (TitleBarUtil) inflate.findViewById(R.id.mTitleBarUtil);
-        mTitleBarUtil.setTitle("福彩官网");
+        mTitleBarUtil.setTitle("中彩网");
         mTitleBarUtil.setTitleColor(Color.parseColor("#ffffff"));
         mWebView= (WebView) inflate.findViewById(R.id.webview);
         msrf= (SwipeRefreshLayout) inflate.findViewById(R.id.srf);
@@ -60,7 +60,7 @@ public class BlankFragment3 extends Fragment {
         });
 
         webSettings.setJavaScriptCanOpenWindowsAutomatically(true);
-        mWebView.loadUrl("http://www.cwl.gov.cn/");
+        mWebView.loadUrl("http://m.zhcw.com/kaijiang/");
 
 
         msrf.setEnabled(false);
@@ -69,7 +69,7 @@ public class BlankFragment3 extends Fragment {
             public void onRefresh() {
                 msrf.setEnabled(true);
 
-                mWebView.loadUrl("http://www.cwl.gov.cn/");
+                mWebView.loadUrl("http://m.zhcw.com/kaijiang/");
                 new Handler().postDelayed(new Runnable() {
                     @Override
                     public void run() {

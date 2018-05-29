@@ -2,12 +2,12 @@ package cn.lemon.ticketsystem.ui;
 
 import android.content.DialogInterface;
 import android.graphics.Color;
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,10 +32,10 @@ public class FirstActivity extends AppCompatActivity {
 
         public void initView() {
 
-            mFragmentList.add(BlankFragment.newInstance());
-            mFragmentList.add(BlankFragment2.newInstance());
-            mFragmentList.add(BlankFragment3.newInstance());
-            mFragmentList.add(BlankFragment4.newInstance());
+            mFragmentList.add(cn.lemon.ticketsystem.ui.BlankFragment.newInstance());
+            mFragmentList.add(cn.lemon.ticketsystem.ui.BlankFragment2.newInstance());
+            mFragmentList.add(cn.lemon.ticketsystem.ui.BlankFragment3.newInstance());
+            mFragmentList.add(cn.lemon.ticketsystem.ui.BlankFragment4.newInstance());
 
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
             //设置对话框标题，该标题会显示在标题区域中
@@ -75,14 +75,14 @@ public class FirstActivity extends AppCompatActivity {
                     new NavigationTabBar.Model.Builder(
                             getResources().getDrawable(R.mipmap.logo),
                             Color.parseColor("#11cccccc")
-                    ).title("中彩网查询")
+                    ).title("拍照识别")
                             .build()
             );
             models.add(
                     new NavigationTabBar.Model.Builder(
                             getResources().getDrawable(R.mipmap.logo),
                             Color.parseColor("#11cccccc")
-                    ).title("福彩官网查询")
+                    ).title("中彩网查询")
                             .badgeTitle("icon")
                             .build()
             );    models.add(
@@ -96,7 +96,7 @@ public class FirstActivity extends AppCompatActivity {
 
             navigationTabBar.setModels(models);
             FragmentManager fragmentManager = getSupportFragmentManager();
-            ViewpagerAdapter mAdapter = new ViewpagerAdapter(fragmentManager, mFragmentList);
+            cn.lemon.ticketsystem.ui.ViewpagerAdapter mAdapter = new cn.lemon.ticketsystem.ui.ViewpagerAdapter(fragmentManager, mFragmentList);
             mBannerViewPager.setAdapter(mAdapter);
             navigationTabBar.setViewPager(mBannerViewPager, 0);
         }

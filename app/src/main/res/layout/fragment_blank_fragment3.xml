@@ -1,14 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.BlankFragment3">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context=".ui.BlankFragment2">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <cn.lemon.ticketsystem.ui.TitleBarUtil
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/mTitleBarUtil"
+        android:background="#e20000"
 
-</FrameLayout>
+        android:layout_height="50dp"></cn.lemon.ticketsystem.ui.TitleBarUtil>
+
+
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/srf"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <WebView
+            android:id="@+id/webview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/d50"></WebView>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</LinearLayout>

@@ -39,6 +39,9 @@ import cn.lemon.ticketsystem.R;
  * @updateDes
  */
 public class TheApplication extends Application {
+    public static boolean hasGotToken;
+    //尝试次数
+    public static int times = 0;
 
 
     //全局Context
@@ -62,6 +65,15 @@ public class TheApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+
+           initAccessTokenWithAkSk();
+
+                com.orhanobut.hawk.Hawk.init(this)
+                .setEncryptionMethod(com.orhanobut.hawk.HawkBuilder.EncryptionMethod.NO_ENCRYPTION)
+                .setStorage(com.orhanobut.hawk.HawkBuilder.newSqliteStorage(this))
+                .setLogLevel(com.orhanobut.hawk.LogLevel.FULL)
+                .build();
+
         JPushInterface.setDebugMode(true);
         JPushInterface.init(this);
         Utils.init(this);
@@ -113,6 +125,25 @@ public class TheApplication extends Application {
     public static float getPxFromSp(float sp) {
         float result = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP, sp, mContext.getResources().getDisplayMetrics());
         return result;
+    }
+
+        private void initAccessTokenWithAkSk() {
+        com.baidu.ocr.sdk.OCR.getInstance().initAccessTokenWithAkSk(new com.baidu.ocr.sdk.OnResultListener<com.baidu.ocr.sdk.model.AccessToken>() {
+            @Override
+            public void onResult(com.baidu.ocr.sdk.model.AccessToken result) {
+                hasGotToken = true;
+            }
+
+            @Override
+            public void onError(com.baidu.ocr.sdk.exception.OCRError error) {
+                error.printStackTrace();
+                if ( times++ < 3 ) {
+                    initAccessTokenWithAkSk();
+                } else {
+//                    android.widget.Toast.makeText(TheApplication.this, "AK，SK方式获取token失败", android.widget.Toast.LENGTH_SHORT).show();
+                }
+            }
+        }, getApplicationContext(), Console.APP_KEY, Console.APP_SECRET);
     }
 
     /**

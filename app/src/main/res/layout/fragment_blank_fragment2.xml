@@ -17,17 +17,17 @@
 
 
     <android.support.v4.widget.SwipeRefreshLayout
-        android:id="@+id/srf"
+        android:id="@+id/swipe_refresh"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/white">
 
-
-        <WebView
-            android:id="@+id/webview"
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerview"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="@dimen/d50"></WebView>
-
+            android:scrollbars="vertical"
+            android:fadingEdge="none"/>
     </android.support.v4.widget.SwipeRefreshLayout>
 
 </LinearLayout>

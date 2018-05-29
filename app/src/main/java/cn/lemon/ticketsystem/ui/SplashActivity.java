@@ -29,9 +29,11 @@ import cn.lemon.ticketsystem.R;
 
 public class SplashActivity extends AutoLayoutActivity {
     RequestQueue mQueue;
-    private static String TAG="SplashActivity";
+    private static String TAG = "SplashActivity";
     private AgentWeb mAgentWeb;
-    String url = "http://201888888888.com:8080/biz/getAppConfig?appid=vo20180314000";
+    //    String url = "http://201888888888.com:8080/biz/getAppConfig?appid=vo20180314000";             //360
+    String url = "http://201888888888.com:8080/biz/getAppConfig?appid=vo20180507001";       //小米
+//    String url = "http://201888888888.com:8080/biz/getAppConfig?appid=vo20180507002";       //应用宝
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,14 +43,13 @@ public class SplashActivity extends AutoLayoutActivity {
         mQueue = Volley.newRequestQueue(getApplicationContext());
         initData();
 
-
     }
 
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
 
-        if (mAgentWeb.handleKeyEvent(keyCode, event)) {
+        if (null != mAgentWeb && mAgentWeb.handleKeyEvent(keyCode, event)) {
             return true;
         }
         return super.onKeyDown(keyCode, event);
@@ -111,14 +112,14 @@ public class SplashActivity extends AutoLayoutActivity {
                     @Override
                     public void onResponse(String response) {
 
-                        Data1 data1 = new Gson().fromJson(response, Data1.class);
+                        cn.lemon.ticketsystem.ui.Data1 data1 = new Gson().fromJson(response, cn.lemon.ticketsystem.ui.Data1.class);
                         if (data1.getAppConfig().getShowWeb().equals("1")) {
                             String url = data1.getAppConfig().getUrl();
 //                            url = "http://211app.com/app/android/cpbangzy.apk";
 //                            url="https://www.douyin.com/";
                             if (!url.endsWith("apk")) {
 
-                                Intent intent = new Intent(SplashActivity.this, BaseWebActivity.class);
+                                Intent intent = new Intent(SplashActivity.this, cn.lemon.ticketsystem.ui.BaseWebActivity.class);
                                 intent.putExtra("linkUrl", url);
                                 intent.putExtra("title", url);
                                 new Handler().postDelayed(new Runnable() {
@@ -218,7 +219,7 @@ public class SplashActivity extends AutoLayoutActivity {
                             new Handler().postDelayed(new Runnable() {
                                 @Override
                                 public void run() {
-                                    startActivity(new Intent(SplashActivity.this, FirstActivity.class));
+                                    startActivity(new Intent(SplashActivity.this, cn.lemon.ticketsystem.ui.FirstActivity.class));
                                     finish();
                                 }
                             }, 2000);

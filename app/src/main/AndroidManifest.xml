@@ -104,10 +104,6 @@
         <activity android:name=".ui.FirstActivity"></activity>
 
 
-
-
-
-
         <receiver
             android:name=".MyReceiver"
             android:exported="false"
@@ -230,7 +226,7 @@
 
         <!-- Required  . Enable it you can get statistics data with channel -->
         <meta-data android:name="JPUSH_CHANNEL" android:value="developer-default"/>
-        <meta-data android:name="JPUSH_APPKEY" android:value="53b640c49b32f6f3aff92b00" /> <!--  </>值来自开发者平台取得的AppKey-->
+        <meta-data android:name="JPUSH_APPKEY" android:value="c01d309c19389c854529d24c" /> <!--  </>值来自开发者平台取得的AppKey-->
 
 
 
