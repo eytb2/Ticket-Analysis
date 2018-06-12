@@ -93,6 +93,7 @@
             android:name="design_height"
             android:value="1920" />
 
+
         <activity android:name=".ui.SplashActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -118,24 +119,16 @@
             </intent-filter>
         </receiver>
 
+        <activity android:name=".asd.FcTrendsInfoActivity">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        </activity>
+        <activity android:name=".asd.WyTrendChartActivity"
+                  android:screenOrientation="landscape"
+                  android:label="">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            </activity>
 
 
 

@@ -61,9 +61,9 @@ public class TitleBarUtil extends ViewGroup implements View.OnClickListener {
 
     private void init(Context context) {
         if (mImmersive) {
-            mStatusBarHeight = getStatusBarHeight();
+            mStatusBarHeight = getStatusBarHeight()+10;
         }
-        mActionPadding = dip2px(5);
+        mActionPadding = dip2px(8);
         mOutPadding = dip2px(8);
         mHeight = dip2px(DEFAULT_TITLE_BAR_HEIGHT);
         initView(context);
@@ -80,25 +80,28 @@ public class TitleBarUtil extends ViewGroup implements View.OnClickListener {
         mLeftText.setTextSize(DEFAULT_ACTION_TEXT_SIZE);
         mLeftText.setSingleLine();
         mLeftText.setGravity(Gravity.CENTER_VERTICAL);
-        mLeftText.setPadding(mOutPadding + mActionPadding, 0, mOutPadding, 0);
+        mLeftText.setPadding(mOutPadding + mActionPadding, 5, mOutPadding, 0);
 
         mCenterText = new TextView(context);
         mSubTitleText = new TextView(context);
         mCenterLayout.addView(mCenterText);
         mCenterLayout.addView(mSubTitleText);
+        mCenterLayout.setPadding(mOutPadding + mActionPadding, 8, mOutPadding, 0);
 
         mCenterLayout.setGravity(Gravity.CENTER);
         mCenterText.setTextSize(DEFAULT_MAIN_TEXT_SIZE);
         mCenterText.setSingleLine();
         mCenterText.setGravity(Gravity.CENTER);
         mCenterText.setEllipsize(TextUtils.TruncateAt.END);
+        mCenterText.setPadding(mOutPadding + mActionPadding, 10, mOutPadding, 0);
 
         mSubTitleText.setTextSize(DEFAULT_SUB_TEXT_SIZE);
         mSubTitleText.setSingleLine();
         mSubTitleText.setGravity(Gravity.CENTER);
         mSubTitleText.setEllipsize(TextUtils.TruncateAt.END);
+        mSubTitleText.setPadding(mOutPadding + mActionPadding, 5, mOutPadding, 0);
 
-        mRightLayout.setPadding(mOutPadding, 0, mOutPadding, 0);
+        mRightLayout.setPadding(mOutPadding, 5, mOutPadding, 0);
 
         addView(mLeftText, layoutParams);
         addView(mCenterLayout);
@@ -109,7 +112,7 @@ public class TitleBarUtil extends ViewGroup implements View.OnClickListener {
     public void setImmersive(boolean immersive) {
         mImmersive = immersive;
         if (mImmersive) {
-            mStatusBarHeight = getStatusBarHeight();
+            mStatusBarHeight = getStatusBarHeight()+10;
         } else {
             mStatusBarHeight = 0;
         }
@@ -158,6 +161,8 @@ public class TitleBarUtil extends ViewGroup implements View.OnClickListener {
                 setTitle(title.subSequence(0, index), "  " + title.subSequence(index + 1, title.length()), LinearLayout.HORIZONTAL);
             } else {
                 mCenterText.setText(title);
+                mCenterText.setPadding(mOutPadding + mActionPadding, 10, mOutPadding, 0);
+
                 mSubTitleText.setVisibility(View.GONE);
             }
         }

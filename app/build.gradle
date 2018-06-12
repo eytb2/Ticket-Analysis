@@ -127,8 +127,9 @@ android {
         compile 'com.github.addappcn:android-pickers:1.0.2'
         compile 'com.github.orhanobut:hawk:1.21'
 
-
-
+        compile 'org.jsoup:jsoup:1.10.3'
+        compile 'com.android.support:multidex:1.0.2'
+        compile 'org.xutils:xutils:3.5.0'
     }
 
     tasks.withType(JavaCompile) {
@@ -139,4 +140,5 @@ dependencies {
     compile 'com.android.support:support-v4:25.2.0'
     compile files('libs/ocr-sdk.jar')
     compile files('libs/showapi_sdk.jar')
+    compile project(':androidutils')
 }

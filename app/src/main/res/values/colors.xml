@@ -12,6 +12,11 @@
     <color name="main_black_color_999999">#999999</color>
     <color name="darkorange">#ff8c00</color><!--暗桔黄色 -->
     <!--切线-->
+    <color name="tab_normal_text_color">#707070</color>
+    <color name="tab_select_text_blue">#1296db</color>
+    <color name="tab_select_text_red">#d81e06</color>
+    <color name="tab_select_text_green">#1afa29</color>
+
     <color name="main_divider_color">#DBDBDB</color>
     <!-- 重要级文字信息标题-->
     <color name="main_black_color_333333">#333333</color>

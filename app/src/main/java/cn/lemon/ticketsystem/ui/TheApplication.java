@@ -1,9 +1,9 @@
 package cn.lemon.ticketsystem.ui;
 
-import android.app.Application;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.support.multidex.MultiDex;
 import android.text.TextUtils;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
@@ -23,11 +23,17 @@ import com.standards.library.network.NetworkConfig;
 import com.standards.library.util.LogUtil;
 import com.tencent.bugly.Bugly;
 
+import org.xutils.x;
+
 import java.io.File;
+import java.util.Date;
 
 import cn.jpush.android.api.JPushInterface;
 import cn.lemon.ticketsystem.BuildConfig;
 import cn.lemon.ticketsystem.R;
+import cn.lemon.ticketsystem.asd.ConstData;
+import momo.cn.edu.fjnu.androidutils.base.BaseApplication;
+import momo.cn.edu.fjnu.androidutils.utils.StorageUtils;
 
 
 /**
@@ -38,7 +44,7 @@ import cn.lemon.ticketsystem.R;
  * @updateDate
  * @updateDes
  */
-public class TheApplication extends Application {
+public class TheApplication extends BaseApplication {
     public static boolean hasGotToken;
     //尝试次数
     public static int times = 0;
@@ -60,7 +66,11 @@ public class TheApplication extends Application {
     //此App一些信息的存储文件夹
     private static File appRootDirectory;
 
-
+    @Override
+    protected void attachBaseContext(Context base) {
+        super.attachBaseContext(base);
+        MultiDex.install(this);
+    }
 
     @Override
     public void onCreate() {
@@ -73,6 +83,20 @@ public class TheApplication extends Application {
                 .setStorage(com.orhanobut.hawk.HawkBuilder.newSqliteStorage(this))
                 .setLogLevel(com.orhanobut.hawk.LogLevel.FULL)
                 .build();
+
+
+        x.Ext.init(this);
+        //写入APK第一次打开时间
+        if(TextUtils.isEmpty(StorageUtils.getDataFromSharedPreference(ConstData.SharedKey.INSTALL_TIME)))
+            StorageUtils.saveDataToSharedPreference(ConstData.SharedKey.INSTALL_TIME, "" + new Date().getTime());
+
+        AppContext.getInstance().init(this);
+        mContext = getContext();
+        LogUtil.init(BuildConfig.DEBUG_LOG, "lucky");
+        DataProvider.init(this);
+        NetworkConfig.setBaseUrl(BuildConfig.HOST_URL);
+        ReturnCodeConfig.getInstance().initReturnCode(ReturnCode.CODE_SUCCESS, ReturnCode.CODE_EMPTY);
+
 
         JPushInterface.setDebugMode(true);
         JPushInterface.init(this);

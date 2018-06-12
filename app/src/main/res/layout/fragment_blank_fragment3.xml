@@ -11,8 +11,7 @@
         android:layout_width="match_parent"
         android:id="@+id/mTitleBarUtil"
         android:background="#e20000"
-
-        android:layout_height="50dp"></cn.lemon.ticketsystem.ui.TitleBarUtil>
+        android:layout_height="65dp"></cn.lemon.ticketsystem.ui.TitleBarUtil>
 
 
 

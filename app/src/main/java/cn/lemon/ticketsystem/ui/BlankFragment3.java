@@ -1,7 +1,6 @@
 package cn.lemon.ticketsystem.ui;
 
 
-import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
@@ -34,8 +33,7 @@ public class BlankFragment3 extends Fragment {
         inflate = inflater.inflate(R.layout.fragment_blank_fragment3, container, false);
         // Inflate the layout for this fragment
         mTitleBarUtil= (TitleBarUtil) inflate.findViewById(R.id.mTitleBarUtil);
-        mTitleBarUtil.setTitle("中彩网");
-        mTitleBarUtil.setTitleColor(Color.parseColor("#ffffff"));
+
         mWebView= (WebView) inflate.findViewById(R.id.webview);
         msrf= (SwipeRefreshLayout) inflate.findViewById(R.id.srf);
         WebSettings webSettings = mWebView .getSettings();

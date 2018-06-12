@@ -13,6 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import cn.lemon.ticketsystem.R;
+import cn.lemon.ticketsystem.asd.FCTrendsTypeFramgnet;
 import devlight.io.library.ntb.NavigationTabBar;
 
 public class FirstActivity extends AppCompatActivity {
@@ -34,7 +35,7 @@ public class FirstActivity extends AppCompatActivity {
 
             mFragmentList.add(cn.lemon.ticketsystem.ui.BlankFragment.newInstance());
             mFragmentList.add(cn.lemon.ticketsystem.ui.BlankFragment2.newInstance());
-            mFragmentList.add(cn.lemon.ticketsystem.ui.BlankFragment3.newInstance());
+            mFragmentList.add(FCTrendsTypeFramgnet.newInstance());
             mFragmentList.add(cn.lemon.ticketsystem.ui.BlankFragment4.newInstance());
 
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -68,7 +69,7 @@ public class FirstActivity extends AppCompatActivity {
                     new NavigationTabBar.Model.Builder(
                             getResources().getDrawable(R.mipmap.logo),
                             Color.parseColor("#11cccccc")
-                    ).title("本地查询")
+                    ).title("首页")
                             .build()
             );
             models.add(
@@ -82,7 +83,7 @@ public class FirstActivity extends AppCompatActivity {
                     new NavigationTabBar.Model.Builder(
                             getResources().getDrawable(R.mipmap.logo),
                             Color.parseColor("#11cccccc")
-                    ).title("中彩网查询")
+                    ).title("彩票走势")
                             .badgeTitle("icon")
                             .build()
             );    models.add(
