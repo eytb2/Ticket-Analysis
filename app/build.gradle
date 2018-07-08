@@ -14,8 +14,8 @@ android {
         }
 
         defaultConfig {
-
-            applicationId "cn.lemon.ticketsystem" //JPush上注册的包名.
+            vectorDrawables.useSupportLibrary = true
+            applicationId "com.lemon.backnightgit" //JPush上注册的包名.
 
 //            applicationId "cn.lemon123456.ticketsystem"
             minSdkVersion 15
@@ -37,7 +37,7 @@ android {
 
             manifestPlaceholders = [
                     JPUSH_PKGNAME : applicationId,
-                    JPUSH_APPKEY : "c01d309c19389c854529d24c", //JPush上注册的包名对应的appkey.
+                    JPUSH_APPKEY : "9332355a66eefe48a51848c4", //JPush上注册的包名对应的appkey.
                     JPUSH_CHANNEL : "developer-default", //暂时填写默认值即可.
             ]
 

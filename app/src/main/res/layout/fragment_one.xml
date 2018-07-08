@@ -6,7 +6,7 @@
               android:layout_height="match_parent"
               android:orientation="vertical">
 
-    <cn.lemon.ticketsystem.ui.TitleBar
+    <com.lemon.backnightgit.ui.TitleBar
         android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -18,7 +18,7 @@
         app:text_content="大乐透"
         app:title_textColor="@color/white"
         app:title_textSize="20dp">
-    </cn.lemon.ticketsystem.ui.TitleBar>
+    </com.lemon.backnightgit.ui.TitleBar>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -42,7 +42,7 @@
                     android:layout_marginBottom="150dp"
                     android:orientation="vertical">
 
-                    <cn.lemon.ticketsystem.ui.MyGridView
+                    <com.lemon.backnightgit.ui.MyGridView
                         android:id="@+id/numbersContainer"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -58,7 +58,7 @@
                         android:layout_marginBottom="20dp"
                         android:background="#E5E5E5"/>
 
-                    <cn.lemon.ticketsystem.ui.MyGridView
+                    <com.lemon.backnightgit.ui.MyGridView
                         android:id="@+id/latterNumbersContainer"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -92,7 +92,7 @@
                 android:background="@color/white"
                 android:orientation="vertical">
 
-                <cn.lemon.ticketsystem.ui.DrawableTextView
+                <com.lemon.backnightgit.ui.DrawableTextView
                     android:id="@+id/randomBet"
                     android:layout_width="match_parent"
                     android:layout_height="45dp"

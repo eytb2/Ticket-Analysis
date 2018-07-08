@@ -5,7 +5,7 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent">
 
-    <cn.lemon.ticketsystem.ui.TitleBar
+    <com.lemon.backnightgit.ui.TitleBar
         android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -18,7 +18,7 @@
         app:title_textColor="@color/white"
         app:title_textSize="20sp"
         >
-    </cn.lemon.ticketsystem.ui.TitleBar>
+    </com.lemon.backnightgit.ui.TitleBar>
 
     <LinearLayout
         android:id="@+id/nullPageTip"

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="cn.lemon.ticketsystem">
+    package="com.lemon.backnightgit">
 
     <!--网络权限问题-->
     <uses-permission android:name="android.permission.INTERNET"/>
@@ -19,9 +19,9 @@
 
 
     <permission
-        android:name="cn.lemon.ticketsystem.permission.JPUSH_MESSAGE"
+        android:name="com.lemon.backnightgit.permission.JPUSH_MESSAGE"
         android:protectionLevel="signature" />
-    <uses-permission android:name="cn.lemon.ticketsystem.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="com.lemon.backnightgit.permission.JPUSH_MESSAGE" />
 
 
 
@@ -115,7 +115,7 @@
                 <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" /> <!--Required  用户接收SDK通知栏信息的intent-->
                 <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" /> <!--Required  用户打开自定义通知栏的intent-->
                 <action android:name="cn.jpush.android.intent.CONNECTION" /><!-- 接收网络变化 连接/断开 since 1.6.3 -->
-                <category android:name="cn.lemon.ticketsystem" />
+                <category android:name="com.lemon.backnightgit" />
             </intent-filter>
         </receiver>
 
@@ -149,7 +149,7 @@
             <intent-filter>
                 <action android:name="cn.jpush.android.ui.PushActivity" />
                 <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="cn.lemon.ticketsystem" />
+                <category android:name="com.lemon.backnightgit" />
             </intent-filter>
         </activity>
 
@@ -167,7 +167,7 @@
         </service>
         <!-- since 3.0.9 Required SDK 核心功能-->
         <provider
-            android:authorities="cn.lemon.ticketsystem.DataProvider"
+            android:authorities="com.lemon.backnightgit.DataProvider"
             android:name="cn.jpush.android.service.DataProvider"
             android:exported="false"
             />
@@ -180,13 +180,13 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="cn.jpush.android.intent.DaemonService" />
-                <category android:name="cn.lemon.ticketsystem" />
+                <category android:name="com.lemon.backnightgit" />
             </intent-filter>
 
         </service>
         <!-- since 3.1.0 Required SDK 核心功能-->
         <provider
-            android:authorities="cn.lemon.ticketsystem.DownloadProvider"
+            android:authorities="com.lemon.backnightgit.DownloadProvider"
             android:name="cn.jpush.android.service.DownloadProvider"
             android:exported="true"
             />
@@ -197,7 +197,7 @@
             android:exported="false">
             <intent-filter android:priority="1000">
                 <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" />   <!--Required  显示通知栏 -->
-                <category android:name="cn.lemon.ticketsystem" />
+                <category android:name="com.lemon.backnightgit" />
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.USER_PRESENT" />
@@ -219,7 +219,7 @@
 
         <!-- Required  . Enable it you can get statistics data with channel -->
         <meta-data android:name="JPUSH_CHANNEL" android:value="developer-default"/>
-        <meta-data android:name="JPUSH_APPKEY" android:value="c01d309c19389c854529d24c" /> <!--  </>值来自开发者平台取得的AppKey-->
+        <meta-data android:name="JPUSH_APPKEY" android:value="9332355a66eefe48a51848c4" /> <!--  </>值来自开发者平台取得的AppKey-->
 
 
 

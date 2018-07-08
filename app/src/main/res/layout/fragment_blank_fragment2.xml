@@ -7,12 +7,12 @@
               android:orientation="vertical"
              tools:context=".ui.BlankFragment2">
 
-    <cn.lemon.ticketsystem.ui.TitleBarUtil
+    <com.lemon.backnightgit.ui.TitleBarUtil
         android:layout_width="match_parent"
         android:id="@+id/mTitleBarUtil"
         android:background="#e20000"
 
-        android:layout_height="65dp"></cn.lemon.ticketsystem.ui.TitleBarUtil>
+        android:layout_height="65dp"></com.lemon.backnightgit.ui.TitleBarUtil>
 
 
 

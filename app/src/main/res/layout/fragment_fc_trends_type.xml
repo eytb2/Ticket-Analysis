@@ -5,12 +5,12 @@
     android:layout_height="match_parent"
     >
 
-    <cn.lemon.ticketsystem.ui.TitleBarUtil
+    <com.lemon.backnightgit.ui.TitleBarUtil
         android:id="@+id/mTitleBarUtil"
         android:layout_width="match_parent"
         android:layout_height="60dp"
 
-        android:background="#e20000"></cn.lemon.ticketsystem.ui.TitleBarUtil>
+        android:background="#e20000"></com.lemon.backnightgit.ui.TitleBarUtil>
 
 
     <ProgressBar

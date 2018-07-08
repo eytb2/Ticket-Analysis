@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">彩票榜</string>
+    <string name="app_name">足球比分</string>
 
     <!-- 请求状态-->
     <string name="load_system_busy">一不留神，页面走丢啦~</string>

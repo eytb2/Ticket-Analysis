@@ -5,7 +5,7 @@
               android:orientation="vertical"
               xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <cn.lemon.ticketsystem.ui.TitleBar
+    <com.lemon.backnightgit.ui.TitleBar
         android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -14,16 +14,16 @@
         app:title_textColor="@color/white"
         app:title_textSize="20sp"
         >
-    </cn.lemon.ticketsystem.ui.TitleBar>
+    </com.lemon.backnightgit.ui.TitleBar>
 
-    <cn.lemon.ticketsystem.ui.PullToRefreshLayout
+    <com.lemon.backnightgit.ui.PullToRefreshLayout
         android:id="@+id/refreshLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <include layout="@layout/refresh_head"/>
 
-        <cn.lemon.ticketsystem.ui.pullableview.PullableListView
+        <com.lemon.backnightgit.ui.pullableview.PullableListView
             android:id="@+id/newsList"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -32,6 +32,6 @@
 
         <include layout="@layout/load_more"/>
 
-    </cn.lemon.ticketsystem.ui.PullToRefreshLayout>
+    </com.lemon.backnightgit.ui.PullToRefreshLayout>
 
 </LinearLayout>
