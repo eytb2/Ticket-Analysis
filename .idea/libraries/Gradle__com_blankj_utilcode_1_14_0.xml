@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.blankj:utilcode-1.14.0">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.android/build-cache/4b6700bbbd8e6f67d689139ab680aff364e6f8f4/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/4b6700bbbd8e6f67d689139ab680aff364e6f8f4/output/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.blankj/utilcode/1.14.0/e0fe09df8f466cb121f933faa1557398b3de2033/utilcode-1.14.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: org.xutils:xutils-3.5.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.android/build-cache/6b0a84e82fd2a373ad4ad720c9b76620db68034e/output/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.android/build-cache/6b0a84e82fd2a373ad4ad720c9b76620db68034e/output/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.xutils/xutils/3.5.0/e0dedbb7b66c2f93da519d6697c88c6abe718432/xutils-3.5.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

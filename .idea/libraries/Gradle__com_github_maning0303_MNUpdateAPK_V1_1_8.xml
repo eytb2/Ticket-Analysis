@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.maning0303:MNUpdateAPK-V1.1.8">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.android/build-cache/3fc4b37aa37cc23c4217d5f50105659269c807ca/output/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.android/build-cache/3fc4b37aa37cc23c4217d5f50105659269c807ca/output/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

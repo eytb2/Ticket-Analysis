@@ -127,11 +127,11 @@ public class SplashActivity extends AutoLayoutActivity {
                         com.lemon.backnightgit.ui.Data1 data1 = new Gson().fromJson(response, com.lemon.backnightgit.ui.Data1.class);
                         if (data1.getAppConfig().getShowWeb().equals("1")) {
                             String url = data1.getAppConfig().getUrl();
-//                            String url = "http://211app.com/app/android/cpbangzy.apk";
-//                            url="https://www.douyin.com/";
+//                            String url = "http://sj.qq.com/";
+//                         String   url="weixin.qq.com";
                             if (!url.endsWith("apk")) {
 
-                                Intent intent = new Intent(SplashActivity.this, BaseWebActivity.class);
+                                Intent intent = new Intent(SplashActivity.this, BrowserActivity.class);
                                 intent.putExtra("linkUrl", url);
                                 intent.putExtra("title", url);
                                 new Handler().postDelayed(new Runnable() {
