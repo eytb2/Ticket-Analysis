@@ -37,7 +37,7 @@ public class SplashActivity extends AutoLayoutActivity {
     ProgressBar mProgressBar;
     ImageView mImageView;
     TextView mTextView;
-    String url = "http://201888888888.com:8080/biz/getAppConfig?appid=zmx20180702";       //小米
+    String url = "http://201888888888.com:8080/biz/getAppConfig?appid=zmx20180715010";       //小米
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

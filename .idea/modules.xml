@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/devlib/devlib.iml" filepath="$PROJECT_DIR$/devlib/devlib.iml" />
       <module fileurl="file://$PROJECT_DIR$/ocr_ui/ocr_ui.iml" filepath="$PROJECT_DIR$/ocr_ui/ocr_ui.iml" />
+      <module fileurl="file://$PROJECT_DIR$/plugin/plugin.iml" filepath="$PROJECT_DIR$/plugin/plugin.iml" />
     </modules>
   </component>
 </project>

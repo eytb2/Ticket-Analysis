@@ -18,6 +18,7 @@ import com.blankj.utilcode.util.Utils;
 import com.lemon.backnightgit.BuildConfig;
 import com.lemon.backnightgit.R;
 import com.lemon.backnightgit.asd.ConstData;
+import com.qihoo360.replugin.RePlugin;
 import com.standards.library.app.AppContext;
 import com.standards.library.app.ReturnCode;
 import com.standards.library.app.ReturnCodeConfig;
@@ -70,12 +71,13 @@ public class TheApplication extends BaseApplication {
     protected void attachBaseContext(Context base) {
         super.attachBaseContext(base);
         MultiDex.install(this);
+        RePlugin.App.attachBaseContext(this);
     }
 
     @Override
     public void onCreate() {
         super.onCreate();
-
+        RePlugin.App.onCreate();
            initAccessTokenWithAkSk();
 
                 com.orhanobut.hawk.Hawk.init(this)
